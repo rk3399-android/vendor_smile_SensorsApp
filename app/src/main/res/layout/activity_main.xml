@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/panel_color">
+    
+    <ImageView
+        android:id="@+id/rmp"
+        app:srcCompat="@drawable/rmp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/compteur_bg"/> 
+     
+     <ImageView
+        android:id="@+id/aiguille_rpm"
+        app:srcCompat="@drawable/aiguille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+		android:layout_marginLeft="105dp"/> 
+	 
+	<ImageView
+		android:id="@+id/speed"
+		app:srcCompat="@drawable/speed"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/> 
+        
+    <ImageView
+		android:id="@+id/aiguille"
+		app:srcCompat="@drawable/aiguillespeed"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="745dp"/> 
+        
+	<TextView
+		android:id="@+id/odo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="#f5f5f5"
+		android:alpha="0.5"
+		android:layout_marginTop="220dp"
+        android:layout_marginLeft="770dp"
+        android:background="@drawable/gear_bg"/> 	 
+	 
+        
+   <RelativeLayout
+        android:id="@+id/gear_group"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="360dp"
+        android:background="@drawable/gear_bg"> 
+		<com.smile.yaofang.auto_application_test.GearPosition
+			android:id="@+id/gearposition"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>   
+		<com.smile.yaofang.auto_application_test.GearPositionUn
+			android:id="@+id/gearpositionun"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp"
+			android:layout_marginLeft="120dp"/>  
+		<com.smile.yaofang.auto_application_test.GearPositionDeux
+			android:id="@+id/gearpositiondeux"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp"
+			android:layout_marginLeft="200dp"/>  	
+	</RelativeLayout>			 
+   
+   <com.smile.yaofang.auto_application_test.AbsFuelBrake
+		android:id="@+id/absfuelbrake"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/gear_group"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="390dp"
+		android:background="@drawable/gear_bg"/>	
+</RelativeLayout>
